@@ -13,6 +13,9 @@ pipeline {
         }
 
         stage('Backend Build') {
+            tools {
+                maven 'Maven_3.9.10'
+            }
             steps {
                 bat 'mvn clean package -f patient-monitoring-backend\\pom.xml'
             }
