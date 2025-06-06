@@ -14,22 +14,22 @@ pipeline {
 
         stage('Backend Build') {
             steps {
-                sh 'mvn clean package -f patient-monitoring-backend/pom.xml'
+                bat 'mvn clean package -f patient-monitoring-backend/pom.xml'
             }
         }
 
         stage('Frontend Build') {
             steps {
                 dir("${env.FRONTEND_DIR}") {
-                    sh 'npm install'
-                    sh 'ng build --configuration production'
+                    bat 'npm install'
+                    bat 'ng build --configuration production'
                 }
             }
         }
 
         stage('Deploy') {
             steps {
-                sh './scripts/deploy.sh'
+                bat 'scripts\\deploy.bat'
             }
         }
     }
