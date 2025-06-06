@@ -9,6 +9,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git 'https://github.com/Sinchana1997/patient-monitoring-system.git'
+            
             }
         }
 
