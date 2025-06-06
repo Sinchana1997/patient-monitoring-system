@@ -1,0 +1,17 @@
+<p>patient-dashboard works!</p>
+<h2>Patient Vitals</h2>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Temp</th>
+    <th>HR</th>
+    <th>Oxygen</th>
+  </tr>
+  <tr *ngFor="let p of patients">
+    <td>{{ p.name }}</td>
+    <td>{{ p.temperature }}</td>
+    <td>{{ p.heartRate }}</td>
+    <td>{{ p.oxygenLevel }}</td>  
+
+  </tr>
+</table>
