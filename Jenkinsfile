@@ -34,7 +34,10 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'scripts\\deploy.bat'
+                bat '''
+                    set "PATH=C:\\Windows\\System32;%PATH%"
+                    scripts\\deploy.bat
+                '''
             }
         }
     }
