@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git credentialsId: 'github-token4', url: 'https://github.com/Sinchana1997/patient-monitoring-system.git'
+                git credentialsId: 'github-token5', url: 'https://github.com/Sinchana1997/patient-monitoring-system.git'
             }
         }
 
