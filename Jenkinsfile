@@ -17,7 +17,7 @@ pipeline {
                 maven 'Maven_3.9.10'
             }
             steps {
-                bat 'mvn clean package -f patient-monitoring-backend\\pom.xml'
+                bat 'mvn clean package -f patient-monitoring-system\\pom.xml'
             }
         }
 
