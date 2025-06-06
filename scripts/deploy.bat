@@ -1,6 +1,6 @@
 @echo off
 echo 🔴 Stopping backend...
-for /f "tokens=2 delims=," %%a in ('tasklist /FI "IMAGENAME eq java.exe" /FO CSV /NH') do taskkill /PID %%a
+for /f "tokens=2 delims=," %%a in ('tasklist /FI "IMAGENAME eq java.exe" /FO CSV /NH') do taskkill /PID %%a /F
 
 echo 🟢 Starting backend...
 start java -jar patient-monitoring-backend\target\*.jar
