@@ -24,8 +24,11 @@ pipeline {
         stage('Frontend Build') {
             steps {
                 dir("${env.FRONTEND_DIR}") {
-                    bat 'npm install'
-                    bat 'ng build --configuration production'
+                    bat '''
+                        set PATH=C:\\Users\\resea\\AppData\\Roaming\\npm;%PATH%
+                        npm install
+                        ng build --configuration production
+                    '''
                 }
             }
         }
