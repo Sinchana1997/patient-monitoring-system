@@ -20,12 +20,11 @@ pipeline {
                 bat 'mvn clean package -f pom.xml'
             }
         }
-
         stage('Frontend Build') {
             steps {
                 dir("${env.FRONTEND_DIR}") {
                     bat '''
-                        set PATH=C:\\Users\\resea\\AppData\\Roaming\\npm;%PATH%
+                        set "PATH=C:\\Program Files\\nodejs;%PATH%"
                         npm install
                         ng build --configuration production
                     '''
