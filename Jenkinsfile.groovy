@@ -14,7 +14,7 @@ pipeline {
 
         stage('Backend Build') {
             steps {
-                bat 'mvn clean package -f patient-monitoring-backend/pom.xml'
+                bat 'mvn clean package -f patient-monitoring-backend\\pom.xml'
             }
         }
 
